@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Dashboard</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<style>
+    table {
+        border: 1px black;
+    }
+    td{
+        border: 1px black;
+    }
+    thead {
+        background-color: aquamarine;
+    }
+    .passed{
+        background-color: green;
+    }
+    .failed{
+        background-color: red;
+    }
+</style>
+
+<body>
+    <header>
+        <img class="centre_HZ" src="images/hz logo.png" alt="HZ logo">
+    </header>
+    <div class="main">
+        <nav class="columns navbar">
+        <a href="profile1.html">Profile</a>
+        <a href="Dashboard.html">dashboard</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+    <h1 class="groter">Dashboard</h1>
+
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Quarter</th>
+                <th scope="col">course</th>
+                <th scope="col">ECs</th>
+                <th scope="col">Exam Type</th>
+                <th scope="col">grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Quarter 1-->
+                <td rowspan="4">1</td>
+                <td>Program and career orientation</td>
+                <td>2.5</td>
+                <td>Assesment website</td>
+                <td class="passed">10</td>
+            </tr>
+            <tr>
+                <!-- Quarter 1-->
+                <td>Computer Science Basics</td>
+                <td>5</td>
+                <td>Written knowledge test</td>
+                <td class="pass"></td>
+            </tr>
+            <tr>
+                <!-- Quarter 1-->
+                <td>Programming Basics</td>
+                <td>5</td>
+                <td>Case study Exam</td>
+            </tr>
+            <tr>
+                <!-- Quarter 1-->
+                <td>Programming Basics</td>
+                <td>5</td>
+                <td>Knowledge test</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
