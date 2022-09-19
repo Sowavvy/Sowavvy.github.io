@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <style>
+        td, th {
+            border: 2px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+        tr {
+            background-color: #d7d7d7;
+        }
+        .progress {
+            width: 600px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            margin: auto;
+        }
+        .progress header span {
+            color: black;
+            float: right;
+        }
+        .progress .bar {
+            position: relative;
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+        /* width = aantal behaalde EC/60*100% */
+        .progress .bar .percent {
+            color: #0c0;
+            background-color: #0c0;
+            width: 41.666666666%;
+            border-radius: 10px;
+        }
+        /* left: beginnen bij 1% ivm netheid daarna left % gelijkstellen aan width .progress .bar .percent */
+        .progress .bar .percent .text {
+            color: black;
+            position: absolute;
+            left: 42%;
+            top: 0;
+        }
+        .progress .bar .ref {
+            position: absolute;
+            left: 75%;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: black;
+        }
+        .progress .bar .ref:before {
+            content: attr(data-ref);
+            position: absolute;
+            width: 100px;
+            left: -50px;
+            top: 100%;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <header>
+            <a href="index1.html">Homepage</a>
+            <a href="profile.html">Profile</a>
+            <a class="active" href="dasboard1.html">Dashboard</a>
+            <a href="faq1.html">Faq</a>
+            <a href="motivation.html">motivation</a>
+            <a href="blog.html">Blog</a>
+            <img src="images/hz logo.png" alt="hz" width="20" height="20">
+        </header>
+    </div>
+    
+    <h1>My dashboard</h1>
+
+    <h3>study monitor</h3>
+        <p class="max-width">Information about the current status of my studies. Below is a table with information about this year's tests. If i have not yet received a grade for this test there will be a '#'. Below is also a progress bar that makes it easy to see how far I am. The minimum I am allowed to score is a 45EC. Hopefully at the end of the year I will have a maximum of 60EC.</p>
+
+    <table>
+        <tr>
+            <th>Blok</th>
+            <th>Course Name</th>
+            <th>Exam Code</th>
+            <th>Total EC</th>
+            <th>test</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td rowspan="5">1</td>
+            <td>Program and Career Orientation</td>
+            <td>CU75001</td>
+            <td>2,5</td>
+            <td>Assesment website</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>Computer Science Basics</td>
+            <td>CU75002</td>
+            <td>5</td>
+            <td>Written knowledge tests</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>Programming basics</td>
+            <td>CU75003</td>
+            <td>5</td>
+            <td>Case Study</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>IT Personality Project week 1</td>
+            <td>CU75054</td>
+            <td>5</td>
+            <td>knowledge test</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>IT Personality 1</td>
+            <td>CU75056</td>
+            <td>5</td>
+            <td>knowledge test</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td rowspan="1">2</td>
+            <td rowspan="1">Object Oriented Programming</td>
+            <td rowspan="1">CU75004V1</td>
+            <td rowspan="1">10</td>
+            <td>Case Study Exam</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td rowspan="2">3</td>
+            <td rowspan="1">Framework Development 1</td>
+            <td rowspan="1">CU75008</td>
+            <td rowspan="1">5</td>
+            <td rowspam="1">Case Study Exam</td>
+            <td>#</td>
+        <tr>
+            <td>Framework Project 1</td>
+            <td>CU75009</td>
+            <td>5</td>
+            <td>Case Study Exam</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td rowspan="9">4</td>
+            <td rowspan="3">Framework Project 2</td>
+            <td rowspan="3">CU75011V3</td>
+            <td rowspan="3">10</td>
+            <td>Final Delivery</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>Report of Assesment tests and optiional Assesment</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>IT development Portfolio</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>IT personality 2</td>
+            <td>CU75057V1</td>
+            <td>1.25</td>
+            <td>Portfolio</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>Personal Professional development: Exploration (PPD-E)(INT class)</td>
+            <td>CU75068V2</td>
+            <td>12.5</td>
+            <td>English test, Criterium focused Interview</td>
+            <td>#</td>
+        </tr>
+    </table>
+    
+    <div class="progress">
+        <header><b>Study Bar</b><span>35 over</span></header>
+        <div class="bar">
+            <!-- class=percent met EC zie je niet. Dit ivm netheid. Werkelijke text is alt 255 -->
+            <div class="percent"> 
+                <div class="text">25 EC</div>
+            </div>
+            <div class="ref" data-ref="45EC"></div>
+        </div>
+    </div>
+        
+    <h3>Studie guide</h3>
+        <p class="max-width">Below you will find some pages that may be useful during your study</p>
+        <div class="button"><a target="blank" href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen">Education and examination regulations</a></div>
+        <div class="button"><a target="blank" href="https://learn.hz.nl/my/">LearnHZ</a></div>
+        <div class="button"><a target="blank" href="https://apps.hz.nl/WebApplicatieControlsUrls/Default.aspx?menu=095125102205077190037243248178061089216172153169&id=094054202047054030093068032073088000058080205006">Study progress and grades</a></div>
+        <div class="button"><a target="blank" href="https://education.github.com/">Github Students</a></div>
+ 
+</body>
+</html>
