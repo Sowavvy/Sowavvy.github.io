@@ -1,0 +1,60 @@
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    } 
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.aside {
+    animation: pulse 1.25s alternate infinite;
+    padding: 5px;
+    position: fixed;
+    right: -125px;
+    top: 25%;
+    list-style: none;
+    transform: scale(1.1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px #ccc;
+    transition: 1s ease-out;
+    border-radius: 10px;
+    background: #333;
+}
+
+.aside:hover {
+    right: 5px;
+    animation: none;
+}
+
+.aside-header {
+    color: #fff;
+    padding: 5px 0;
+    margin-bottom: 3px;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+}
+
+.aside-content {
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.aside-content:hover {
+    background: turquoise;
+    color: #333;
+    
+}
+
+.aside-content:hover .aside-content-text {
+    color: white;
+}
+
+.aside-content-text {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}

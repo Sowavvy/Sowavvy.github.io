@@ -1,0 +1,121 @@
+		@keyframes arrow-pulse-unchecked {
+			to {
+				transform: rotateZ(135deg) translateY(-5px) translateX(5px);
+			}
+		}
+
+		@keyframes arrow-pulse-checked {
+			to {
+				transform: scale(1.1);
+			}
+		}
+
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: #ccc;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #858585;
+			border-radius: 5px;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+
+
+		a.navigation-menu-content-faq {
+			background: #333;
+			color: #fff;
+			pointer-events: none;
+		}
+
+		a.navigation-menu-content-faq:hover {
+			color: #fff;
+			background: #333;
+			border: none;
+		}
+
+		main {
+			flex: 1 1 auto;
+		}
+
+		.main-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.main-header {
+			margin: 100px 0 30px;
+		}
+
+		.main-content-cards {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 40px;
+		}
+
+		.main-content-card {
+			max-width: 75%;
+			box-shadow: 0 0 20px #ccc;
+			border-radius: 10px;
+			padding: 20px 20px 10px;
+			margin: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.main-content-card-question {
+			margin-bottom: 15px;
+			font-size: 1.2em;
+		}
+
+		.main-content-card-answer {
+			font-size: 0;
+			transition: 1s ease;
+			align-self: flex-start;
+			font-style: italic;
+			color: #000000a9
+		}
+
+		.main-content-card-answer a {
+			color: #000000a9;
+			font-weight: bold;
+		}
+
+		.main-content-card-answer a:hover {
+			color: #000;
+		}
+
+		.main-content-card:hover .main-content-card-arrow {
+			animation: arrow-pulse-unchecked 1s ease-out infinite alternate;
+		}
+
+		.main-content-card-arrow {
+			width: 15px;
+			height: 15px;
+			border-top: 3px solid #000;
+			border-right: 3px solid #000;
+			transform: rotateZ(135deg);
+			margin: 10px;
+		}
