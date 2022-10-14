@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <link rel="stylesheet" type="text/css" href="css/style1.css" />
+    <link rel="stylesheet" type="text/css" href="css/sidemenu.css" />
     <style>
         td, th {
             border: 2px solid black;
@@ -29,14 +30,14 @@
             background-color: #ccc;
             border-radius: 10px;
         }
-        /* width = aantal behaalde EC/60*100% */
+    
         .progress .bar .percent {
             color: #0c0;
             background-color: #0c0;
             width: 41.666666666%;
             border-radius: 10px;
         }
-        /* left: beginnen bij 1% ivm netheid daarna left % gelijkstellen aan width .progress .bar .percent */
+
         .progress .bar .percent .text {
             color: black;
             position: absolute;
@@ -180,22 +181,45 @@
     </table>
     
     <div class="progress">
-        <header><b>Study Bar</b><span>35 over</span></header>
+        <header><b>StudyBar</b><span>60 left</span></header>
         <div class="bar">
-            <!-- class=percent met EC zie je niet. Dit ivm netheid. Werkelijke text is alt 255 -->
-            <div class="percent"> 
-                <div class="text">25 EC</div>
-            </div>
+            <div class="percent"></div>
+            <div class="text">0 EC</div>
             <div class="ref" data-ref="45EC"></div>
         </div>
     </div>
-        
-    <h3>Studie guide</h3>
-        <p class="max-width">Below you will find some pages that may be useful during your study</p>
-        <div class="button"><a target="blank" href="https://hz.nl/over-de-hz/regelingen-documenten-1/onderwijs-en-examenregelingen">Education and examination regulations</a></div>
-        <div class="button"><a target="blank" href="https://learn.hz.nl/my/">LearnHZ</a></div>
-        <div class="button"><a target="blank" href="https://apps.hz.nl/WebApplicatieControlsUrls/Default.aspx?menu=095125102205077190037243248178061089216172153169&id=094054202047054030093068032073088000058080205006">Study progress and grades</a></div>
-        <div class="button"><a target="blank" href="https://education.github.com/">Github Students</a></div>
+<main>
+    <aside>
+        <div class="aside">
+            <h3 class="aside-header">Useful links</h3>
+            <a class="aside-content"
+                href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/EN/6.-Regulations-Study-Programmes/CER-HZ-Bachelor-full-time-2022-2023-DEF-June-13.pdf"
+                target="_blank" rel="noopener">
+                <div class="aside-content-text">HZ CER</div>
+            </a>
+            <a class="aside-content" href="https://learn.hz.nl/" target="_blank" rel="noopener">
+                <div class="aside-content-text">HZ Learn</div>
+            </a>
+            <a class="aside-content" href="https://hz.osiris-student.nl/#code=HG5O8u" target="_blank"
+                rel="noopener">
+                <div class="aside-content-text">Osiris</div>
+            </a>
+            <a class="aside-content"
+                href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/OERS/2022-2023/IR-CER-HZ-B-HBO-ICT-full-time-2022-2023-DEF.pdf"
+                target="_blank" rel="noopener">
+                <div class="aside-content-text">HBO-ICT IR</div>
+            </a>
+            <a class="aside-content" href="https://github.com/HZ-HBO-ICT" target="_blank" rel="noopener">
+                <div class="aside-content-text">HBO-ICT GitHub</div>
+            </a>
+            <a class="aside-content"
+                href="https://teams.microsoft.com/l/team/19%3a2e2afa0286b04932be16cb8ad2d9d2c0%40thread.skype/conversations?groupId=95bddebc-a340-4d88-81fc-b80e0bfc70c3&tenantId=4c16deb3-342d-4fca-bcd5-b1429308034c"
+                target="_blank" rel="noopener">
+                <div class="aside-content-text">HBO-ICT Teams</div>
+            </a>
+        </div>
+    </aside>
+</main>
  
 </body>
 </html>
